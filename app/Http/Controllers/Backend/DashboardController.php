@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Http\Controllers\Backend;
+
+use App\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class DashboardController extends Controller
+{
+    public function index(User $user)
+    {
+        return view('backend.dashboard', compact('user'));
+    }
+}
